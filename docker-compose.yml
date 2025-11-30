@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  pr-reviewer:
+    build: .
+    container_name: github-pr-reviewer
+    # Use env_file to load from .env (do not copy .env into image)
+    env_file:
+      - .env
+    volumes:
+      - ./reviews:/app/reviews  # Mount reviews directory for output
+    restart: unless-stopped
+    # Default: review all open PRs
+    command: ["python", "-m", "src.main"]
+    
+  # Optional: Service to review a specific PR
+  # Usage: docker-compose --profile single run pr-reviewer-single
+  pr-reviewer-single:
+    build: .
+    container_name: pr-reviewer-single
+    env_file:
+      - .env
+    volumes:
+      - ./reviews:/app/reviews
+    # Replace 123 with your PR number
+    command: ["python", "-m", "src.main", "--pr", "123"]
+    profiles: ["single"]

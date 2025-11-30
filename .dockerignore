@@ -1,0 +1,49 @@
+# Ignore virtual environment
+venv/
+.venv/
+env/
+.env
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore test files and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Ignore output directories
+output/
+reviews/
+*.md
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Ignore documentation
+README.md
+CHANGELOG.md
+SUMMARY.md
+
+# Ignore environment files (should not be in image)
+.env
+.env.example
+.env.local
