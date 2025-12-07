@@ -1,3 +1,5 @@
+Author: Zizamele Nyawo
+
 # LLM-Based GitHub Pull Request Code Reviewer
 
 ## Overview
@@ -335,11 +337,3 @@ None. All changes are backward compatible.
 - PR may be empty or have no file changes
 - PR may be from a fork with restricted access
 - Check PR permissions and repository access
-
-## License
-
-[Add your license here]
-
-## Contributing
-
-[Add contribution guidelines here]
